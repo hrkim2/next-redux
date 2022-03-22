@@ -1,6 +1,7 @@
 import { combineReducers } from "@reduxjs/toolkit";
 import { HYDRATE } from "next-redux-wrapper";
 import counter from "./counter";
+import sum from "./sum";
 
 const reducer = (state, action) => {
   if (action.type === HYDRATE) {
@@ -11,6 +12,7 @@ const reducer = (state, action) => {
   }
   return combineReducers({
     counter,
+    sum,
   })(state, action);
 };
 
